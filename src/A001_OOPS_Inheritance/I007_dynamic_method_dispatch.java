@@ -35,7 +35,10 @@ public class I007_dynamic_method_dispatch {
 		
 		c.sound();
 		
-		
+//		Overiding M1
+//		20
+//		Meeo Meeo
+
 	}}
 
 

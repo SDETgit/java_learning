@@ -31,6 +31,9 @@ public class E001_getters_setters {
 		System.out.println(p.getAge());
 		p.setName("");
 		System.out.println(p.getName());
+		
+		//10
+		//null
 	}
 
 }

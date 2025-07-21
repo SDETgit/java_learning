@@ -70,6 +70,12 @@ public class A002_interface {
 		c.radius(1);
 		
 		System.out.println(c.getArea());
+		//Bike pedaling
+		//Servicing vehicle bike
+		//Vehicle is starting bike
+		//Drawing circle
+		//3.141592653589793
+
 	}
 
 }

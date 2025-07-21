@@ -1,5 +1,5 @@
 package A002_OOPS_Polymorphism;
-
+//Dynamic method dispatch or Run time polymorphism 
 class Animal {
     void makeSound() {
         System.out.println("Some sound");

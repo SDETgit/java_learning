@@ -21,6 +21,10 @@ public class P001_Compile_time_poly {
 		System.out.println(m.multiply(2.1, 2.4));  //Here double method is called 
 		System.out.println(m.multiply(96, 63));      // here int method is called 
 		System.out.println(m.multiply(96, 63,1));
+		
+		//5.04
+		//6048
+		//6048
 	}
 
 }

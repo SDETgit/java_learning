@@ -1,6 +1,6 @@
 package A007_Exception_Handeling;
 
-//Can be handelled by try catch only 
+//Can be handelled by try catch only  
 
 public class A002_unchecked_exception {
 
@@ -32,7 +32,11 @@ public class A002_unchecked_exception {
 		    	System.out.println("Exception has been caught "+e);
 		    }
 	        
-	        
+		  //Outer try block starts
+		  //Caught inner exception: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
+		  //Caught outer exception: java.lang.ArithmeticException: / by zero
+		  //Program continues...
+
 	}
 
 }

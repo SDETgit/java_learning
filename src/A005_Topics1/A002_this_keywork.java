@@ -46,9 +46,13 @@ public class A002_this_keywork {
 		System.out.println(p2.x+" "+p2.y+" "+p2.w+" "+p2.h);
 		
 		
-		person p3 = new person("Irfan");
+		person p3 = new person("Shubham");
 		
 		System.out.println(p3.name);
+		//0 0 1 1
+		//0 0 2 3
+		//2 3 5 6
+		//Shubham
 	}
 
 }

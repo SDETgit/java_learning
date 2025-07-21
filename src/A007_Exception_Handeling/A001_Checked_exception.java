@@ -34,5 +34,14 @@ public class A001_Checked_exception {
 		 
 		 System.out.println("Code after try catch ");
 	}
+	
+//Exception in thread "main" java.io.FileNotFoundException: file.txt (The system cannot find the file specified)
+//	at java.base/java.io.FileInputStream.open0(Native Method)
+//	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+//	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+//	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+//	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+//	at A007_Exception_Handeling.A001_Checked_exception.main(A001_Checked_exception.java:26)
+
 
 }
