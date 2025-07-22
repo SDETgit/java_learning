@@ -1,10 +1,10 @@
-package A008_Multithreading;
+package A009_Java_topics2;
 
-public class T006_run_vs_rtart {
+public class A002_Java_Garbage_collections {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-df
+ff
 	}
 
 }

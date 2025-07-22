@@ -3,7 +3,7 @@ package A008_Multithreading;
 //| --------------------------- | ----------------------------------------------------------------------------------------------- |
 //| `start()`                   | Starts a new thread by calling its `run()` method internally.                                   |
 //| `run()`                     | Contains the code that the thread will execute. Usually overridden.                             |
-//| `sleep(ms)`                 | Pauses the current thread for a specified time in milliseconds.                                 |
+//| `sleep(ms)`                 | Pauses the current thread for a specified time in milliseconds. Always pauses the thread that calls it.                                  |
 //| `join()`                    | Waits for a thread to die (complete execution).                                                 |
 //| `isAlive()`                 | Returns `true` if the thread is still running.                                                  |
 //| `getName()`                 | Returns the name of the thread.                                                                 |
@@ -15,7 +15,7 @@ package A008_Multithreading;
 //| `yield()`                   | Hints to the thread scheduler to pause and allow other threads of the same priority to execute. |
 //| `interrupt()`               | Interrupts the thread if it is in sleep or waiting state.                                       |
 //| `isInterrupted()`           | Checks if the thread has been interrupted.                                                      |
-
+//| `interrupted()` 			| This method returns true if the current thread has been interrupted; false otherwise.
 class MyThread2 extends Thread {
 	public void run() {
 		System.out.println("Run method is executed by thread: " + Thread.currentThread().getName());
@@ -117,6 +117,7 @@ public class T002_01_Thread_methods {
 	       t.setPriority(Thread.MAX_PRIORITY);  // 10
 	       t2.setPriority(3);  // 10
 	       t5.setPriority(9);
+	       t5.setPriority(Thread.NORM_PRIORITY); //set to 5 
 	       System.out.println("getPriority()"+" "+t.getPriority()+" "+t2.getPriority()+" "+t5.getPriority());
 	       //getPriority() 10 3 9
 //| `currentThread()`           | Returns a reference to the currently executing thread. 
@@ -157,8 +158,40 @@ public class T002_01_Thread_methods {
 	        System.out.println("Is thread interrupted "+t.isInterrupted());
 	        //Is thread interrupted false
 	        //Is thread interrupted true
-	        interrupted():
-	        suspend(): resume():stop():isDaemon():setDaemon
-	}
+	        
+	        Thread t10 = new Thread (() ->{
+	        	try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	        	System.out.println("This is T10 thread");
+	        });
+	        
+	      //  interrupted():
+	      //| `interrupted()` 			| This method returns true if the current thread has been interrupted; false otherwise.
+	        	System.out.println(t10.getState());
+	        	t10.start();
+	        	
+	        	System.out.println(t10.getState());
+	        	t10.currentThread().interrupt();
+	        	
+	        	System.out.println(t10.isInterrupted());
+	        	System.out.println(t10.interrupted());
+	        	System.out.println(t10.interrupted());
+	        	
+	        	//Thread.currentThread() returns the currently executing thread — in this case, it's the main thread, not t10.
+	        	//t10.currentThread().interrupt();
+	        	//So this line is interrupting the main thread, not t10.
+	        	//These are Deprecated due to undsafe nature 
+	        	
+	        	//false    // t10.isInterrupted() → t10 was never interrupted
+	        	//true     // Thread.interrupted() → main thread was interrupted
+	        	//false    // Thread.interrupted() → main thread flag was cleared in previous line
+	        //suspend(): Suspends a thread
+	        //resume() resumes a suspended thread:
+	        //	stop(): forfully stops a thread
+	        	}
 
 }

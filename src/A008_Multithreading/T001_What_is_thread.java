@@ -61,6 +61,13 @@ public class T001_What_is_thread {
 		
 		new Thread(task1).start();
 		new Thread(task2).start();
+//
+		Thread t5 = new Thread("NewThread5") {
+			public void run() {
+				System.out.println("New expression to Createthread ");
+			}
+		};
+		t5.start();
 	}
 
 }
