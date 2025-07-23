@@ -1,5 +1,13 @@
 package A004_OOPS_Encapsulation;
 
+
+//It means binding data (variables) and code (methods) together into a single unit 
+//and restricting direct access to some of the object’s components.
+//Think of a capsule — it contains medicines (data), but you don’t directly touch 
+//the chemicals. You consume the capsule as a whole.
+//Similarly, in Java, internal data is hidden and accessed via controlled methods.
+
+
 class person {
 	private String name ;
 	private int age;

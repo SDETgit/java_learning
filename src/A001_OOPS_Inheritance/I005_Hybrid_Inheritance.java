@@ -1,9 +1,9 @@
 package A001_OOPS_Inheritance;
 
 class parent {
-	 public void displayParent() {
-		 System.out.println("Parent class");
-	 }
+	public void displayParent() {
+		System.out.println("Parent class");
+	}
 }
 
 interface father {
@@ -11,16 +11,15 @@ interface father {
 }
 
 interface mother {
-	public void print() ;
+	public void print();
 }
 
-
- class child extends parent implements father, mother {
+class child extends parent implements father, mother {
 
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println("Mother and father are present ");
+		System.out.println("printing");
 	}
 
 	@Override
@@ -28,25 +27,27 @@ interface mother {
 		// TODO Auto-generated method stub
 		System.out.println("Showing them");
 	}
-	
-	
+
 	public void displaychild() {
 		System.out.println("Child display");
 	}
-	
+
 }
 
 public class I005_Hybrid_Inheritance {
-		
+
 	public static void main(String[] args) {
-		
-		child c = new child () ;
+
+		child c = new child();
 		c.displayParent();
 		c.displaychild();
 		c.show();
 		c.print();
-		
-		
-	}}
 
+		// Parent class
+		// Child display
+		// Showing them
+		// printing
 
+	}
+}

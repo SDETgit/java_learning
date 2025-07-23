@@ -30,7 +30,11 @@ public class I001_single_Inheritance {
 	    myCar.intstance_variable();
 	    
 	    
-		
+	  //Ford honk sound 
+	  //Ford Mustang
+	  //100
+	  //20
+
 		
 		
 	}}

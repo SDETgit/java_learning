@@ -26,7 +26,7 @@ public class I011_method_hiding {
 		h1.m();
 		
 		//Static method parent 
-		//Here during upcasting parent method is called not dynamic dispatch 
+		
 
 	}
 

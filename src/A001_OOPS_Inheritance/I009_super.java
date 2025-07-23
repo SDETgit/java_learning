@@ -43,7 +43,6 @@ class boxweight extends box {
 
 	boxweight(double w, double h, double d, double m) {
 		super(w, h, d);
-		// TODO Auto-generated constructor stub
 		mass = m;
 	}
 
@@ -52,24 +51,20 @@ class boxweight extends box {
 public class I009_super {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		// Accesing variable from parent class having same name in both class
 		b1 b = new b1();
 		b.displayName();
 
 		System.out.println(b.name);
-		System.out.println(b.name);
-
+		
 		// accessing methods
 		b.makesound();
-		
-		//A1 string
-		//B1 String
-		//B1 String
-		//B1 String
-		//A1 sound 
-		//b11 sound 
+
+		// A1 string
+		// B1 String
+		// B1 String
+		// A1 sound
+		// b11 sound
 
 	}
 

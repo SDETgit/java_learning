@@ -12,7 +12,7 @@ class m1 {
 class m2 extends m1 {
 	@Override 
 	public void print() {
-		System.out.println("Overiding M1");
+		System.out.println("Overiding M1 print method");
 	}
 }
 
@@ -24,6 +24,7 @@ public class I006_method_override {
 		m2 m2 = new m2();
 		
 		m2.print();
+		//Overiding M1 print method
 		
 	}}
 

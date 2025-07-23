@@ -9,7 +9,7 @@ class animal {
 class dog extends animal{
 	@Override
 	 public void sound() {
-		 System.out.println("Bao bao");
+		 System.out.println("Bow Bow");
 	 }
 	
 }
@@ -41,6 +41,11 @@ public class I003_Hierarchical_Inheritance {
 		
 		a1.sound();
 		
+		//Bow Bow
+		//Meeo Meeo
+		//Animal sound
+		//Bow Bow
+
 		
 		
 	}}

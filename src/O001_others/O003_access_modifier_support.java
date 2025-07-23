@@ -19,7 +19,19 @@ public class O003_access_modifier_support extends A005_access_modifiers {
 	  //p.startengine3();  
 	  //p.startengine4(); 
 			
-		
+		 Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+	            System.out.println("Shutdown hook: Cleanup before JVM exits...");
+	            try {
+	                Thread.sleep(500);
+	            } catch (InterruptedException e) {}
+	        }));
+
+	        System.out.println("App running. Press Ctrl+C to exit.");
+
+	        // Keeps app running to test Ctrl+C
+	        try {
+	            Thread.sleep(60000);  // 1 minute
+	        } catch (InterruptedException e) {}
 	}
 
 }
